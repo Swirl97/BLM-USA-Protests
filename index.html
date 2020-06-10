@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Protests Across America</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--meta data for sharing links on Facebook-->
+    <meta property="og:title" content="{Protests Across America}"/>
+    <meta property="og:url" content="https://blacklivesmatters.carrd.co/"/>
+    <meta property="og:description" content="This is an example of a storymap."/>
+    <meta property="og:image" content="../../img/social.png"/>
+
+    <!--add required stylesheets-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!--leaflet css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+
+
+    <!--add favicon for the web page-->
+    <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon">
+
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+
+
+    <link rel="stylesheet" type="text/css" href="css/storymap.2.5.css">
+    <!--add required libraries-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.4.0/leaflet.js"></script>
+    <!--jquery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+    <!--boostrap-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--leaflet.ajax for asynchronously adding geojson data-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+
+    <!--mini globle map-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.19/topojson.min.js"></script>
+    <script src="../../js/globeminimap.js"></script>
+
+    <!--story map plugin-->
+    <script src="js/storymap.2.5.js"></script>
+</head>
+<body>
+
+<div id="storymap" class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 storymap-story">
+            <section data-scene="overview" data-background="assets/BLMPicSlides.mp4">
+                <div class="fullscreen text-center">
+
+                    <h1 class="display-4 d-flex justify-content-center">Protests in America</h1>
+
+
+                    <small class="d-flex justify-content-center" style="color: rgba(255,255,255,0.95)">
+                      This story map shows specific places where most Black Lives Matter protests take place.
+                    </small>
+                </div>
+            </section>
+            <section data-scene="washington">
+                <h2> Recent News in Washington State </h2>
+                <h4> Black Lives Matter group in Seattle meets with Mayor Durkan, calls for general strike and march</h4>
+                <a href="https://www.seattletimes.com/seattle-news/politics/black-lives-matter-group-in-seattle-meets-with-mayor-durkan-calls-for-general-strike-and-march/">BLM Group in Seattle meets with Mayor</a>
+                <p>Black Lives Matter Seattle – King County is calling for a statewide general strike and silent march on Friday, June 12, the group announced Saturday.</p>
+            </section>
+
+            <section data-scene="minnesota">
+                <h2>Recent News in Minnesota State </h2>
+                <h4> Minnesota state troopers admit "strategically" deflating tires during George Floyd protests </h4>
+                <a href="https://www.cbsnews.com/news/minnesota-state-patrol-deflated-tires-protests-george-floyd-black-lives-matter/">State Trooper Admits to  deflating tires</a>
+                <p>Minnesota State Patrol troopers have admitted to "strategically" deflating tires during protests following the death of George Floyd. The state's Department of Public Safety (DPS) confirmed the action, CBS Minnesota reports, after social media videos emerged of officers appearing to slash tires in parking lots amid the demonstrations.</p>
+            </section>
+
+            <section data-scene="connecticut">
+                <h2>Connecticut</h2>
+                <h4> Recent News in Connecticut State </h4>
+                <a href="https://patch.com/connecticut/milford/peaceful-black-lives-matter-protest-milford-draws-hundreds">BLM Protest In Milford Draws Hundreds</a>
+                <p>The protest was a small-town gathering but no less impactful than the protests in major cities across the country featuring thousands of marchers.</p>
+            </section>
+
+            <section data-scene="sanfran">
+                <h2>San Francico</h2>
+                <h4> Recent News in San Franciso, CA </h4>
+                <a href="https://abc7news.com/black-lives-matter-bernal-rock-san-francisco-message/6239733/">SF Public Works apologizes for painting over BLM mural</a>
+                <p>The Bernal Rock as many know it, has become a public message board. For the past week the message has been "Black Lives Matter" but overnight it has been tagged and painted over multiple times.</p>
+            </section>
+
+            <section data-scene="lax">
+                <h2>Los Angeles</h2>
+                <h4> Recent News in Los Angeles, CA </h4>
+                <a href="https://www.hollywoodreporter.com/news/all-black-lives-matter-march-proceed-la-pride-1297548">All Black Lives Matter March to Proceed Without L.A. Pride</a>
+                <p>Christopher Street West, the nonprofit behind L.A. Pride, dropped out of the event after a permit application to the L.A. police department drew backlash on social media.
+The All Black Lives Matter solidarity march will continue — but without L.A. Pride, the latter's organizer, Christopher Street West, announced on Monday. </p>
+            </section>
+
+            <section data-scene="illinois">
+                <h2>Illinois</h2>
+                <h4> Recent News in Illinois </h4>
+                <a href="https://news.stlpublicradio.org/post/quincy-protesters-affirm-black-lives-matter">Quincy Protesters Affirm That Black Lives Matter</a>
+                <p>Quincy, Illinois, is among the thousands of cities across the country where demonstrations against police brutality have taken place in the past two weeks. Illinois’ Gem City has a population of about 40,000, with nearby Hannibal adding another 17,000.</p>
+                <img src="../../img/bannner.jpg" class="img-responsive img-thumbnail" alt="responsive image"
+                     alt-text="protesters holding up BLM flag">
+                <p>..</p>
+            </section>
+
+            <section data-scene="end" data-background="assets/end.jpg">
+                <div class="fullscreen text-center">
+                    <h1 class="display-4 d-flex justify-content-center">Thank You</h1>
+                    <small class="d-flex justify-content-center" style="color: rgba(255,255,255,0.95)">
+
+                    </small>
+                </div>
+            </section>
+
+        </div>
+        <!--map div-->
+        <div class="col-sm-6 col-md-8 storymap-map"></div>
+    </div>
+
+
+    <dl>
+        <dt>
+            <!--facebook icon-->
+            <a class="fab fa-facebook-square btn"
+               href="https://facebook.com/sharer.php?u=http://geoviz.ceoas.oregonstate.edu/storymap/examples/2.5/video.html"
+               target="_blank"></a>
+        </dt>
+        <dt>
+            <!--facebook icon-->
+            <a class="fab fa-github btn" href="https://github.com/Swirl97/BLM-USA-Protests" style="top:40px"
+               target="_blank"></a>
+        </dt>
+        <dt>
+            <!--info icon-->
+            <i class="fas fa-info-circle btn" style="top:60px" data-toggle="modal" data-target="#info-modal"></i>
+        </dt>
+    </dl>
+
+    <!--the info page-->
+    <div class="modal fade" id="info-modal" role="dialog">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">About</h4>
+                </div>
+                <div class="modal-body">
+                    <p>This is a web map of Black Lives Matter protests in America. The story map library is derived from the
+                        storymap plugin for leaflet at <a>http://atlefren.github.io/storymap/</a>, and its functionality
+                        relies on both leaflet and Boostrap. As a student, I received this from my professor. </p>
+                    <p><b>storymap.js</b> | Released Date: 02/20/2017 | Version: 2.5 | MIT License </p>
+                    <p><b>Author: Sarah Liu</b> | College of Arts & Sciences | University of Washington
+                    </p>
+                    <p>Most of the information posted here are from different news sources. </p>
+                    <p>The background video of the title page was made by me! </p>
+                    <p>This story map uses geospatial data from mapbox, Google Earth Engine, ESRI Map and Open Street Maps.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- main javascript -->
+<script type="text/javascript">
+
+
+    // Create Legend Contents in html format
+    var protest_legend = '<i style="background: orange; opacity: 0.5"></i><p><b>Protests</b></p>';
+    //var forest_legend = '<i style="background: green; opacity: 0.5"></i><p><b>Forest</b></p>';
+
+    // For each layer, the first variable is the layer, the second is the legend. The layer variable can be any kinds of layers that leaflet.js supports.
+    // var layers = {
+    //      layer1: {layer: layer1, legend: legend1},
+    //      layer2: {layer: layer2, legend: legend2}
+    //      ...
+    // }
+
+    var layers = {
+        ESRI: {layer: L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}')},
+        protests: {
+            layer: L.geoJson.ajax('assets/protests.geojson', {
+                color: 'orange',
+                weight: 2,
+                opacity: 0.3
+            }), legend: protest_legend
+        },
+        GEE: {
+            layer: L.tileLayer('http://earthengine.google.org/static/hansen_2013/tree_alpha/{z}/{x}/{y}.png'),
+            legend: forest_legend
+        },
+        satellite: {
+            layer: L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5icTFxZ3ZkdncifQ.P9MBej1xacybKcDN_jehvw', {
+                id: 'mapbox.satellite'
+            })
+        },
+        cartodb_light: {layer: L.tileLayer('http://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png')}
+    };
+
+    var scenes = {
+        overview: {lat: 38.2700, lng: 100.8603, zoom: 7, name: 'Cover Page', layers: []},
+        washington: {lat: 47.7510528, lng: -120.8101782, zoom: 5, name: 'Washington', layers: []},
+        minnesota: {lat: 46.7295316, lng: -94.7559395, zoom: 5, name: 'Minnesota', layers: []},
+        connecticut: {lat: 41.6032154, lng: -73.1227684, zoom: 5, name: 'Connecticut', layers: []},
+        sanfran: {lat: 37.7749243, lng: -122.454435, zoom: 5, name: 'San Franciso', layers: []},
+        lax: {lat: 34.0522292, lng: -118.2787044, zoom: 5, name: 'Los Angeles', layers: []},
+        illinois: {lat: 40.6331196, lng: -89.4335477, zoom: 7, name: 'Illinois', layers: []},
+        end: {lat: 38.2700, lng: 100.8603, zoom: 7, name: 'The End'}
+    };
+
+    $('#storymap').storymap({
+        scenes: scenes,
+        baselayer: layers.cartodb_light,
+        legend: true, // if you do not want a legend feature, you can simply not define the createLegend function.
+        credits: "",
+        loader: true,
+        scalebar: false,
+        fly: true,
+        navwidget: true,
+
+        createMap: function () {
+            // create a map in the "map" div, set the view to a given place and zoom
+            var map = L.map($(".storymap-map")[0], {
+                zoomControl: false, scrollWheelZoom: false, fadeAnimation: true,
+                zoomAnimation: true
+            }).setView([44, -120], 7);
+            return map;
+        }
+    });
+</script>
+</body>
+</html>
