@@ -1,6 +1,6 @@
 # Story Map of Current BLM Protests
 <h4> 458 Final Project - Story Map of Current BLM Protests </h4>
-Here is a link to where you can help:  Click [here](https://blacklivesmatters.carrd.co/)
+Here is a link to where you can help:https://blacklivesmatters.carrd.co/
 Here is a link to get educated: https://blacklivesmatter.com/
 
 <h2> Project Description </h2>
