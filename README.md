@@ -8,12 +8,12 @@ This map shows the cities where Black Lives Matter protests are happening at. Th
 
 <h2> Sources </h2>
 <ul>
-  <li> Basemap by: [Mapbox](https://www.mapbox.com/) </li>
-  <li> Fonts by: [Font Awesome](http://fontawesome.io/), [Google Fonts](https://developers.google.com/fonts) </li>
-  <li> [Bootstrap](https://getbootstrap.com/) </li>
-  <li> [leaflet.ajax](https://github.com/calvinmetcalf/leaflet-ajax) </li>
-  <li> [Chroma.js](https://gka.github.io/chroma.js/) </li>
+  <li> Basemap by: Mapbox </li>
+  <li> Fonts by: Font Awesome, Google Fonts </li>
+  <li> Bootstrap </li>
+  <li> leaflet.ajax</li>
+  <li> Chroma.js </li>
 </ul>
 
 <h4> Acknowledgement </h4>
-Thank you professor [Bo Zhao](https://github.com/jakobzhao)!
+Thank you professor Bo Zhao @ https://github.com/jakobzhao!
