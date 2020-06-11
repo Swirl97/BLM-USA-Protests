@@ -170,7 +170,7 @@ The All Black Lives Matter solidarity march will continue — but without L.A. P
 
     // Create Legend Contents in html format
     var protest_legend = '<i style="background: orange; opacity: 0.5"></i><p><b>Protests</b></p>';
-    var iconicon =L.icon({iconUrl: 'img/strong.png', iconSize: [150,100]});
+    var iconicon =L.icon({iconUrl: 'img/strong.png', iconSize: [45, 40]});
     var layers = {
         ESRI: {layer: L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}')},
         protests: {
@@ -211,12 +211,12 @@ The All Black Lives Matter solidarity march will continue — but without L.A. P
 
     var scenes = {
         overview: {lat: 38.2700, lng: 100.8603, zoom: 2, name: 'Cover Page', layers: []},
-        washington: {lat: 47.7510528, lng: -120.8101782, zoom: 7, name: 'Washington', layers: []},
-        minnesota: {lat: 46.7295316, lng: -94.7559395, zoom: 7, name: 'Minnesota', layers: []},
-        connecticut: {lat: 41.6032154, lng: -73.1237884, zoom: 9, name: 'Connecticut', layers: []},
-        sanfran: {lat: 37.7749243, lng: -122.454435, zoom: 11, name: 'San Franciso', layers: []},
-        lax: {lat: 34.0522292, lng: -118.2787044, zoom: 9, name: 'Los Angeles', layers: []},
-        illinois: {lat: 40.6331196, lng: -89.4335477, zoom: 7, name: 'Illinois', layers: []},
+        washington: {lat: 47.7510528, lng: -120.8701782, zoom: 7, name: 'Washington', layers: [layers.markers]},
+        minnesota: {lat: 46.7295316, lng: -94.7559395, zoom: 7, name: 'Minnesota', layers: [layers.markers]},
+        connecticut: {lat: 41.6032154, lng: -73.1237884, zoom: 9, name: 'Connecticut', layers: [layers.markers]},
+        sanfran: {lat: 37.7749243, lng: -122.454435, zoom: 11, name: 'San Franciso', layers: [layers.markers]},
+        lax: {lat: 34.0522292, lng: -118.2787044, zoom: 9, name: 'Los Angeles', layers: [layers.markers]},
+        illinois: {lat: 40.6331196, lng: -89.4335477, zoom: 7, name: 'Illinois', layers: [layers.markers]},
         end: {lat: 38.2700, lng: -100.8603, zoom: 2, name: 'The End', layers: []}
     };
 
