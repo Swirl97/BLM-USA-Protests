@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
     <!--meta data for sharing links on Facebook-->
     <meta property="og:title" content="{Protests Across America}"/>
     <meta property="og:url" content="https://blacklivesmatters.carrd.co/"/>
@@ -38,6 +39,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <!--leaflet.ajax for asynchronously adding geojson data-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+    <script src="/js/leaflet-0.7.2/leaflet.ajax.min.js"></script>
 
     <!--mini globle map-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
@@ -107,7 +109,7 @@ The All Black Lives Matter solidarity march will continue — but without L.A. P
 
             <section data-scene="end" data-background="img/banner.jpg">
                 <div class="fullscreen text-center">
-                    <h1 class="display-4 d-flex justify-content-center">#blacklivesmatter</h1>
+                    <h1 class="display-4 d-flex justify-content-center">#BLACKLIVESMATTER</h1>
                     <small class="d-flex justify-content-center" style="color: rgba(255,255,255,0.95)">
 
                     </small>
@@ -168,8 +170,7 @@ The All Black Lives Matter solidarity march will continue — but without L.A. P
 
     // Create Legend Contents in html format
     var protest_legend = '<i style="background: orange; opacity: 0.5"></i><p><b>Protests</b></p>';
-
-
+    var iconicon =L.icon({iconUrl: 'img/strong.png', iconSize: [150,100]});
     var layers = {
         ESRI: {layer: L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}')},
         protests: {
@@ -185,11 +186,28 @@ The All Black Lives Matter solidarity march will continue — but without L.A. P
         },
         satellite: {
             layer: L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5icTFxZ3ZkdncifQ.P9MBej1xacybKcDN_jehvw', {
-                id: 'mapbox.satellite'
+                id: 'mapbox.streets'
             })
         },
-        cartodb_light: {layer: L.tileLayer('http://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png')}
-    };
+        cartodb_light: {layer: L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png')
+        },
+        markers: {
+        layer: L.geoJson.ajax('assets/protests.geojson', {
+          pointToLayer: function(feature, latlng){
+            return L.marker(latlng, {icon: iconicon})
+          }})
+      }};
+
+    //Attempt to add markers
+    /*var markers L.geoJson.ajax("assets/protests.geojson", {
+        onEachFeature: function(feature, layer) {
+            layer.bindPopup(feature.properties.Name);
+        },
+        pointToLayer: function (feature,latlng) {
+          return L.marker(latlng);
+        },
+    }).addTo(map);
+    */
 
     var scenes = {
         overview: {lat: 38.2700, lng: 100.8603, zoom: 2, name: 'Cover Page', layers: []},
